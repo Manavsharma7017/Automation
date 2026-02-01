@@ -3,7 +3,7 @@ import express = require('express');
 
 const app =express();
 app.use (express.json());
-app.post('*', (req: Express.Request, res: Express.Response) => {
+app.post('/', (req: Express.Request, res: Express.Response) => {
     console.log(req.body);
     res.send('Hello, World!');
 });
