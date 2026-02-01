@@ -2,7 +2,9 @@ import type Express  from 'express';
 import express = require('express');
 
 const app =express();
-app.get('/', (req: Express.Request, res: Express.Response) => {
+app.use (express.json());
+app.post('*', (req: Express.Request, res: Express.Response) => {
+    console.log(req.body);
     res.send('Hello, World!');
 });
 
